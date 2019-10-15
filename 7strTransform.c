@@ -1,6 +1,7 @@
 /**
  * 小工具:字符串格式转换
  * <fprintf> 标准格式输出
+ * command:./7strTransform < 7.csv > output/7output.json 2> output/7err.txt
 */
 #include <stdio.h>
 
@@ -12,7 +13,7 @@ int main()
     int started = 0;
     puts("data=[");
     while (scanf("%f,%f,%79[^\n]", &latitude, &longitude, info) == 3) {
-        
+
         // 输出标准错误,而非标准输出
         if (latitude >90 || latitude < -90){
             fprintf(stderr, "无法识别的latitude:%f\n", latitude);
