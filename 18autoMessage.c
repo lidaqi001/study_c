@@ -31,7 +31,7 @@ void marriage(response r)
 int main()
 {
     response r[] = {
-        {"Mike", DUMP}, {"Luis", SECOND_CHANCE},
+         {"Luis", SECOND_CHANCE},{"Mike", DUMP},
         {"Matt", SECOND_CHANCE}, {"William", MARRIAGE}
     };
     int i;
