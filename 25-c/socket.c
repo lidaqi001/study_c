@@ -1,3 +1,7 @@
+/**
+ * 一整套完整的创建网络服务器流程
+*/
+
 #include <sys/socket.h>
 #include <arpa/inet.h>
 #include <stdio.h>
@@ -8,6 +12,14 @@
 #include <signal.h>
 
 int listener_d;
+
+char *advice[] = {
+    "Take smaller bites\r\n",
+    "Go for the tight jeans. No they do NOT make you look fat.\r\n",
+    "One word: inappropriate\r\n",
+    "Just for today, be honest. Tell your boss what you *really* think\r\n",
+    "You might want to rethink that haircut\r\n"
+};
 
 void _error(char *msg, int isExit)
 {
@@ -101,13 +113,6 @@ int main(int argc, char *argv[])
     if (catch_signal(SIGINT, handle_shutdown) == -1) {
         error("Can't set the interrupt handler",);
     }
-    char *advice[] = {
-        "Take smaller bites\r\n",
-        "Go for the tight jeans. No they do NOT make you look fat.\r\n",
-        "One word: inappropriate\r\n",
-        "Just for today, be honest. Tell your boss what you *really* think\r\n",
-        "You might want to rethink that haircut\r\n"
-    };
 
     // 创建套接字
     open_listener_socket();

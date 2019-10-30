@@ -166,3 +166,16 @@
     kill命令发送信号。
     程序可以用raise()向自己发送信号。
     alarm()会在几秒钟以后向进程发送SIGALRM信号。
+
+> 11
+
+    telnet是一个简易网络客户端。
+    用socket()函数创建套接字。
+    服务器BLAB四部曲：
+        B  = bind()
+        L  = listen()
+        A  = accept()
+        B  = 开始对话
+    用fork()克隆子进程，同时处理多个客户端。
+    DNS = 域名系统
+    getaddrinfo()根据域名找地址。
